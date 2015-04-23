@@ -1,0 +1,19 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class MoveForward : MonoBehaviour {
+
+    
+    public float maxSpeed = 15f;
+
+	void Update () {
+
+        Vector3 pos = transform.position;
+
+        Vector3 velocity = new Vector3(0, maxSpeed * Time.deltaTime, 0); // Schnelligkeit
+
+        pos += transform.rotation * velocity ;
+
+        transform.position = pos;
+	}
+}
